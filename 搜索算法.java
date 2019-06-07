@@ -21,7 +21,7 @@ public class HelloWorld {
 			open.removeFirst();	
 		}
 		System.out.println(open.getFirst().toString());
-		System.out.println("¿í¶ÈÓÅÏÈËã·¨OK");
+		System.out.println("å®½åº¦ä¼˜å…ˆç®—æ³•OK");
 	}
 	public static void DeepthSearch(int start[][],int goal[][]){
 		NineTable startNode = new NineTable(start);
@@ -44,7 +44,7 @@ public class HelloWorld {
 			}
 		}
 		System.out.println(open.getFirst().toString());
-		System.out.println("Éî¶ÈÓÅÏÈËã·¨OK");
+		System.out.println("æ·±åº¦ä¼˜å…ˆç®—æ³•OK");
 	}
 	public static void ThinkSearch(int start[][],int goal[][]){
 		NineTableThinking startNode = new NineTableThinking(start);
@@ -81,7 +81,7 @@ public class HelloWorld {
 			minNode = new NineTableThinking(open.get(min).getStart());
 			System.out.println(open.get(min));
 		}
-		System.out.println("Æô·¢Ê½ËÑË÷ok");
+		System.out.println("å¯å‘å¼æœç´¢ok");
 	}
 	public static int getMin(LinkedList<NineTableThinking> open){
 		int min=0;
@@ -94,11 +94,11 @@ public class HelloWorld {
 		Scanner input =new Scanner(System.in);		
 		int start[][] =new int[3][3];
 		int goal[][] =new int[3][3];
-		System.out.println("ÇëÊäÈëÆğÊ¼µÄ9¹¬¸ñÊı×Ö£¬Êı×ÖµÄ·¶Î§ÊÇ1~8£¬×¢ÒâĞèÒª¿ÕÓàµÄÎ»ÖÃÊäÈë-1¼´¿É");
+		System.out.println("è¯·è¾“å…¥èµ·å§‹çš„9å®«æ ¼æ•°å­—ï¼Œæ•°å­—çš„èŒƒå›´æ˜¯1~8ï¼Œæ³¨æ„éœ€è¦ç©ºä½™çš„ä½ç½®è¾“å…¥-1å³å¯");
 		for(int i =0;i<start.length;i++)
 			for(int j=0;j<3;j++)
 				start[i][j] =input.nextInt();
-		System.out.println("ÇëÊäÈëÄ¿±êµÄ9¹¬¸ñÊı×Ö£¬Êı×ÖµÄ·¶Î§ÊÇ1~8£¬×¢ÒâĞèÒª¿ÕÓàµÄÎ»ÖÃÊäÈë-1¼´¿É");
+		System.out.println("è¯·è¾“å…¥ç›®æ ‡çš„9å®«æ ¼æ•°å­—ï¼Œæ•°å­—çš„èŒƒå›´æ˜¯1~8ï¼Œæ³¨æ„éœ€è¦ç©ºä½™çš„ä½ç½®è¾“å…¥-1å³å¯");
 		for(int i =0;i<start.length;i++)
 			for(int j=0;j<3;j++)
 				goal[i][j] =input.nextInt();
@@ -216,7 +216,7 @@ class NineTable{
 				}					
 		NineTable [] b =new NineTable[next.length];
 		for(int i = 0;i<b.length;i++)
-			b[i] =new NineTable(next[i]); //Ã¿Ò»¸öÔªËØ¶¼±ØĞë¸øÓè¶ÀÁ¢µÄ¹¹Ôì²Å¿ÉÒÔ
+			b[i] =new NineTable(next[i]); //æ¯ä¸€ä¸ªå…ƒç´ éƒ½å¿…é¡»ç»™äºˆç‹¬ç«‹çš„æ„é€ æ‰å¯ä»¥
 		return b;
 	}
 }
